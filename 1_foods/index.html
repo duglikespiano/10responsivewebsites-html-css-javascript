@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="./style.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+			integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<script src="./app.js" defer></script>
+		<title>Foods</title>
+	</head>
+	<body>
+		<!--navbar-->
+		<nav class="navbar target">
+			<a href="#" class="navbar-link">
+				<i class="fas fa-home"></i>
+				<span>Home</span>
+			</a>
+			<a href="#" class="navbar-link">
+				<i class="fas fa-utensils"></i>
+				<span>Meals</span>
+			</a>
+			<a href="#" class="navbar-link">
+				<i class="fas fa-hamburger"></i>
+				<span>Burger</span>
+			</a>
+			<a href="#" class="navbar-link">
+				<i class="fas fa-pizza-slice"></i>
+				<span>Pizza</span>
+			</a>
+			<a href="#" class="navbar-link">
+				<i class="fas fa-blender-phone"></i>
+				<span>Contact</span>
+			</a>
+		</nav>
+		<div class="menu target"></div>
+		<!--end of navbar-->
+
+		<div class="container">
+			<!--section1-->
+			<section class="section1">
+				<h1 class="section-heading">Variety of Foods</h1>
+				<div class="section1-icons">
+					<i class="fas fa-egg change"></i>
+					<i class="fas fa-stroopwafel"></i>
+					<i class="fas fa-cheese"></i>
+					<i class="fas fa-hotdog"></i>
+					<i class="fas fa-drumstick-bite"></i>
+					<i class="fas fa-apple-alt"></i>
+					<i class="fas fa-ice-cream"></i>
+					<i class="fas fa-fish"></i>
+					<i class="fas fa-cookie"></i>
+					<i class="fas fa-seedling"></i>
+				</div>
+			</section>
+			<!--end of section1-->
+
+			<!--section2-->
+			<section class="section2">
+				<h1 class="section-heading">Popular Meals</h1>
+				<div class="cards-container">
+					<div class="card">
+						<img class="card-img" src="./image/card-img-1.png" />
+						<h3 class="card-name">Fish</h3>
+						<button class="card-btn">Order Now</button>
+					</div>
+					<div class="card">
+						<img class="card-img" src="./image/card-img-2.png" />
+						<h3 class="card-name">Cake</h3>
+						<button class="card-btn">Order Now</button>
+					</div>
+					<div class="card">
+						<img class="card-img" src="./image/card-img-3.png" />
+						<h3 class="card-name">Lobster</h3>
+						<button class="card-btn">Order Now</button>
+					</div>
+				</div>
+			</section>
+			<!--end of section2-->
+
+			<!--section3-->
+			<section class="section3">
+				<h1 class="section-heading">Gallery</h1>
+				<div class="gallery">
+					<a href="#" class="gallery-link" title="Order Now">
+						<img class="food-img" src="./image/gallery-img-1.jpg" />
+						<h3 class="food-name">Pancakes</h3>
+						<p class="food-description">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo perferendis unde corrupti, blanditiis, saepe
+						</p>
+					</a>
+					<a href="#" class="gallery-link" title="Order Now">
+						<img class="food-img" src="./image/gallery-img-2.jpg" />
+						<h3 class="food-name">Cupcakes</h3>
+						<p class="food-description">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo perferendis unde corrupti, blanditiis, saepe
+						</p>
+					</a>
+					<a href="#" class="gallery-link" title="Order Now">
+						<img class="food-img" src="./image/gallery-img-3.jpg" />
+						<h3 class="food-name">Hummus</h3>
+						<p class="food-description">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo perferendis unde corrupti, blanditiis, saepe
+						</p>
+					</a>
+					<a href="#" class="gallery-link" title="Order Now">
+						<img class="food-img" src="./image/gallery-img-4.jpg" />
+						<h3 class="food-name">Hamburger</h3>
+						<p class="food-description">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo perferendis unde corrupti, blanditiis, saepe
+						</p>
+					</a>
+					<a href="#" class="gallery-link" title="Order Now">
+						<img class="food-img" src="./image/gallery-img-5.jpg" />
+						<h3 class="food-name">Salmon</h3>
+						<p class="food-description">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo perferendis unde corrupti, blanditiis, saepe
+						</p>
+					</a>
+					<a href="#" class="gallery-link" title="Order Now">
+						<img class="food-img" src="./image/gallery-img-6.jpg" />
+						<h3 class="food-name">Vegetable</h3>
+						<p class="food-description">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo perferendis unde corrupti, blanditiis, saepe
+						</p>
+					</a>
+				</div>
+			</section>
+			<!--end of section3-->
+
+			<!--section4-->
+			<section class="section4">
+				<div class="section4-text">
+					<h2 class="section4-heading">Sign Me Up</h2>
+					<p class="section4-paragraph">Be the first to know about new products</p>
+				</div>
+				<form class="signup-form">
+					<input type="email" class="signup-form-input" placeholder="Enter Your Email" />
+					<button type="submit" class="signup-form-btn"><i class="fas fa-arrow-right"></i></button>
+				</form>
+				<p class="copyright">CodeAndCreate &copy; All Rights Reserved</p>
+			</section>
+			<!--end of section4-->
+		</div>
+	</body>
+</html>
