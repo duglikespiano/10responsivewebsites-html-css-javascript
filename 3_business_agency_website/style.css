@@ -1,0 +1,848 @@
+/* Common styles */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Oswald:wght@200..700&display=swap');
+@font-face {
+	font-family: 'Made Soulmaze';
+	src: url('./font/MADE\ Soulmaze\ PERSONAL\ USE.otf');
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style-type: none;
+	font-family: 'Baloo Da 2', sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+.section-heading {
+	font-family: 'Oswald', sans-serif;
+	font-size: 10rem;
+	font-weight: 300;
+	color: #ddd;
+}
+
+.section-heading-line {
+	width: 10vw;
+	height: 0.2rem;
+	background-color: #ddd;
+	margin-left: 2vw;
+	margin-right: 2vw;
+}
+/* End of Common styles */
+
+/* Navbar */
+.navbar {
+	position: fixed;
+	width: 100%;
+	height: 8rem;
+	top: -8rem;
+	background-color: rgba(0, 0, 0, 0.9);
+	transition: height 0.5s;
+	animation: animateNavbar 0.3s 0.5s forwards;
+	z-index: 1;
+}
+
+.navbar.active {
+	height: 100vh;
+}
+
+.logo {
+	position: absolute;
+	top: 1rem;
+	left: 4rem;
+}
+
+.logo a {
+	font-family: 'Made Soulmaze', sans-serif;
+	font-size: 2.5rem;
+	color: #eee;
+	letter-spacing: 0.1rem;
+}
+
+.logo span {
+	font-family: 'Made Soulmaze', sans-serif;
+	font-size: 3.5rem;
+	font-weight: bold;
+	color: #9e0e09;
+}
+
+.nav-list {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	top: 25%;
+	left: 50%;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(-50%);
+	transition: all 0.3s;
+}
+
+.active .nav-list {
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.5s 0.5s;
+}
+
+.nav-link {
+	font-family: 'Made Soulmaze', sans-serif;
+	font-size: 4rem;
+	letter-spacing: 0.3rem;
+	color: #fff;
+	margin: 2rem 0;
+	transition: color 0.4s;
+}
+
+.nav-link:hover {
+	color: #9e0e09;
+}
+/* End of Navbar */
+
+/* Menu */
+.menu {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	width: 4rem;
+	height: 4rem;
+	justify-content: space-evenly;
+	top: 2rem;
+	right: 4rem;
+	z-index: 2;
+	cursor: pointer;
+}
+
+.line {
+	width: 100%;
+	height: 0.2rem;
+	background-color: #eee;
+	transition: 0.3s;
+}
+
+.line1 {
+	width: 50%;
+}
+
+.line3 {
+	width: 50%;
+	margin-left: auto;
+}
+
+.active .line1 {
+	transform: translate(100%, 1rem) rotate(-35deg);
+	transform-origin: right;
+}
+
+.active .line3 {
+	transform: translateY(-1rem) rotate(35deg);
+	transform-origin: right;
+}
+
+/* End of Menu */
+
+/* Section1 */
+.section1 {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: url('./image/dark-bg.jpeg') no-repeat;
+	background-size: cover;
+}
+
+.banner {
+	position: absolute;
+	width: 100%;
+	top: 20%;
+	left: 50%;
+	text-align: center;
+	transform: translateX(-50%);
+}
+
+.banner-heading {
+	height: 20rem;
+	perspective: 50rem;
+	margin-bottom: 4rem;
+	overflow: hidden;
+}
+
+.banner-heading span {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-family: 'Oswald', sans-serif;
+	color: #fff;
+	font-size: 12rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 3rem;
+	text-shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	transform: translateZ(8rem);
+}
+
+.heading1 {
+	animation: animateHeading 8s 2s infinite;
+}
+
+.heading2 {
+	animation: animateHeading 8s 4s infinite;
+}
+
+.heading3 {
+	animation: animateHeading 8s 6s infinite;
+}
+
+.heading4 {
+	animation: animateHeading 8s 8s infinite;
+}
+
+.banner-paragraph {
+	width: 30%;
+	font-size: 4rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.6);
+	box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.5);
+	padding: 1rem 0;
+	margin: 0 auto 4rem auto;
+	opacity: 0;
+	visibility: hidden;
+	animation: fadeAnimation 1s 1.5s forwards;
+}
+
+.banner-btn {
+	position: relative;
+	width: 30rem;
+	height: 6rem;
+	background: linear-gradient(to right, #9b0e0e, #7a1010);
+	color: #fff;
+	font-size: 2rem;
+	text-transform: uppercase;
+	text-shadow: 0.6rem 0.3rem 0.2rem rgba(0, 0, 0, 0.4);
+	border-radius: 3rem;
+	border: 0.1rem solid #800505;
+	box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	opacity: 0;
+	visibility: hidden;
+	overflow: hidden;
+	animation: fadeAnimation 1s 2s forwards;
+}
+
+.banner-btn::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: -100%;
+	background: linear-gradient(to right, transparent, #fff, transparent);
+	transition: left 0.5s;
+	transform: scaleX(-30deg);
+}
+
+.banner-btn:hover::before {
+	left: 100%;
+}
+/* End of Section1 */
+
+/* Section2 */
+.section2 {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+	background-color: #222020;
+	padding: 0 10rem;
+}
+
+.video-wrapper {
+	position: relative;
+	width: 100rem;
+	height: 50rem;
+	align-self: flex-start;
+	box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.7);
+	overflow: hidden;
+	margin-top: 5vh;
+}
+
+.video-wrapper:hover .controls {
+	transform: translateY(0);
+}
+
+.video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.3;
+	transition: opacity 0.3s;
+}
+
+.controls {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	transform: translateY(calc(100% - 0.4rem));
+	transition: transform 0.5s;
+}
+
+.video-bar-wrapper {
+	position: absolute;
+	width: 100%;
+	height: 1rem;
+	top: 0;
+	left: 0;
+	background-color: #000;
+}
+
+.video-bar {
+	width: 0;
+	height: 100%;
+	background-color: #d30819;
+	transition: width 0.3s linear;
+}
+
+.buttons {
+	padding: 2rem 1rem 1rem 1rem;
+}
+
+.buttons .button {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.buttons .button i {
+	font-size: 2.8rem;
+	color: #fff;
+}
+
+.section2-paragraph {
+	display: flex;
+	width: 100rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	color: #ddd;
+	text-align: justify;
+	text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.7);
+	border-top: 0.3rem double #aaa;
+	border-bottom: 0.3rem double #aaa;
+	padding: 2rem;
+	margin-top: 5rem;
+}
+
+.fa-quote-left {
+	align-self: flex-start;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+.fa-quote-right {
+	align-self: flex-end;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+/* End of Section2 */
+
+/* Section3 */
+.section3 {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	align-items: center;
+	background-color: #03070e;
+	padding: 0 10rem;
+	overflow: hidden;
+}
+
+.pricing-cards-wrapper {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.pricing-card {
+	width: 20rem;
+	height: 40rem;
+	background-color: #181b1d;
+	border-radius: 1rem;
+	box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.7);
+}
+
+.pricing-card-front {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	backface-visibility: hidden;
+}
+
+.pricing-card-heading {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 5rem;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	font-weight: 400;
+	color: #fff;
+}
+
+.heading-free {
+	background: linear-gradient(to right, #087285, #0da53d);
+	border-radius: 1rem 1rem 0 0;
+}
+
+.heading-basic {
+	background: linear-gradient(to right, #946809, #bdba0e);
+	border-radius: 1rem 1rem 0 0;
+}
+
+.heading-standard {
+	background: linear-gradient(to right, #a10c14, #e23b3b);
+	border-radius: 1rem 1rem 0 0;
+}
+
+.heading-premium {
+	background: linear-gradient(to right, #0b7e48, #3be286);
+	border-radius: 1rem 1rem 0 0;
+}
+
+.pricing-card-price {
+	font-family: 'Made Soulmaze', sans-serif;
+	font-size: 5rem;
+	font-weight: 300;
+	color: #fff;
+}
+
+.pricing-card-list li {
+	margin-bottom: 0.5rem;
+}
+
+.list-free li {
+	color: #0da5d3;
+}
+
+.list-basic li {
+	color: #bdba0e;
+}
+
+.list-standard li {
+	color: #e23b3b;
+}
+
+.list-premium li {
+	color: #3be286;
+}
+
+.pricing-card-list i {
+	width: 3rem;
+	font-size: 1.8rem;
+}
+
+.pricing-card-list span {
+	font-size: 1.8rem;
+	font-weight: 300;
+	letter-spacing: 0.1rem;
+}
+
+.pricing-card-btn {
+	width: 18rem;
+	height: 5rem;
+	color: #fff;
+	font-size: 1.6rem;
+	text-shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.5);
+	text-transform: uppercase;
+	border: none;
+	border-radius: 3rem;
+	margin-bottom: 3rem;
+}
+
+.btn-free {
+	background-color: #0da5d3;
+}
+
+.btn-basic {
+	background-color: #bdba0e;
+}
+
+.btn-standard {
+	background-color: #e23b3b;
+}
+
+.btn-premium {
+	background-color: #3be286;
+}
+
+.pricing-card-back {
+	position: absolute;
+	display: flex;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	border-radius: 1rem;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+}
+
+.back-free {
+	background: linear-gradient(to right, #087285, #0da5d3);
+}
+
+.back-basic {
+	background: linear-gradient(to right, #946809, #bdba0e);
+}
+
+.back-standard {
+	background: linear-gradient(to right, #a10c14, #e23b3b);
+}
+
+.back-premium {
+	background: linear-gradient(to right, #0b7e48, #3be286);
+}
+
+.pricing-card-back a {
+	font-size: 2rem;
+	color: #fff;
+}
+/* End of Section3 */
+
+/* Section4 */
+.section4 {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	align-items: center;
+	padding: 0 10rem;
+	background-color: #171718;
+}
+
+.contact-wrapper {
+	display: flex;
+	width: 60%;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact-details {
+	display: flex;
+	margin-bottom: 8rem;
+}
+
+.contact-details div {
+	width: 25rem;
+	text-align: center;
+	margin: 4rem;
+}
+
+.contact-details i {
+	font-size: 5rem;
+	color: #7a1010;
+}
+
+.contact-details h3 {
+	font-family: 'Made Soulmaze', sans-serif;
+	font-size: 2.5rem;
+	margin: 2rem 0;
+	color: #ccc;
+}
+
+.contact-details p {
+	color: #aaa;
+	font-size: 1.6rem;
+}
+
+.contact-wrapper h1 {
+	color: #ccc;
+	font-size: 4rem;
+	text-transform: uppercase;
+	margin-bottom: 3rem;
+}
+
+.contact-form {
+	display: flex;
+	width: 70rem;
+	flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+	font-family: 'Oswald', sans-serif;
+	color: #eee;
+	font-size: 1.8rem;
+	font-weight: 300;
+	letter-spacing: 0.1rem;
+	background-color: #444;
+	border: none;
+	padding: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+.contact-form textarea {
+	width: 100%;
+	height: 15rem;
+	resize: none;
+}
+
+.contact-form input[type='submit'] {
+	background-color: #7a1010;
+	text-transform: uppercase;
+	transition: background-color 0.3s;
+	cursor: pointer;
+}
+
+.contact-form input[type='submit']:hover {
+	background-color: #5f0303;
+}
+/* End of Section4 */
+
+/* Footer */
+footer {
+	display: flex;
+	width: 100%;
+	height: 12rem;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #202122;
+	padding: 0 10rem;
+}
+
+.footer-nav a {
+	font-family: 'Made Soulmaze', sans-serif;
+	color: #ccc;
+	font-size: 2rem;
+	letter-spacing: 0.1rem;
+	margin-right: 3rem;
+	transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+	color: #862323;
+}
+
+.copyright {
+	font-size: 2rem;
+	color: #ddd;
+}
+/* End of Footer */
+
+/* Responsive */
+@media (max-width: 1800px) {
+	.video-wrapper {
+		width: 90rem;
+		height: 45rem;
+	}
+	.section2-paragraph {
+		width: 90rem;
+		height: 10rem;
+	}
+}
+
+@media (max-width: 1650px) {
+	html {
+		font-size: 57%;
+	}
+	.video-wrapper {
+		width: 85rem;
+		height: 40rem;
+	}
+	.section2-paragraph {
+		width: 85rem;
+		height: 5rem;
+		margin-top: 10rem;
+	}
+}
+
+@media (max-width: 1500px) {
+	.section-heading-line {
+		display: none;
+	}
+}
+
+@media (max-width: 1400px) {
+	html {
+		font-size: 45%;
+	}
+	.banner-heading span {
+		font-size: 10rem;
+	}
+	.banner-paragraph {
+		width: 45rem;
+		font-size: 3rem;
+	}
+	.section2,
+	.section3,
+	.section4 {
+		flex-direction: column;
+	}
+	.section2 {
+		justify-content: flex-start;
+	}
+	.section3 .swiper-container {
+		margin-top: 10rem;
+	}
+	.section4 {
+		height: auto;
+		padding: 5rem 0;
+	}
+}
+
+@media (max-width: 900px) {
+	html {
+		font-size: 40%;
+	}
+	.banner {
+		top: 25%;
+	}
+	.banner-heading {
+		height: 15rem;
+	}
+	.banner-heading span {
+		font-size: 8rem;
+	}
+	.footer {
+		padding: 0 5rem;
+	}
+	.footer-nav a {
+		font-size: 1.8rem;
+	}
+}
+
+@media (max-width: 700px) {
+	html {
+		font-size: 35%;
+	}
+	.section2 {
+		height: 130vh;
+	}
+	.contact-details div {
+		margin: 3rem 2rem;
+	}
+	.footer {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.footer-nav {
+		margin-bottom: 2rem;
+	}
+}
+
+@media (max-width: 500px) {
+	html {
+		font-size: 30%;
+	}
+	.banner-heading span {
+		font-size: 4.5rem;
+		letter-spacing: 2rem;
+	}
+	.section2 {
+		height: 60vh;
+	}
+	.section3 {
+		height: 60vh;
+	}
+	.contact-details div {
+		width: 18rem;
+		margin: 3rem 1rem;
+	}
+	.contact-form {
+		width: 60rem;
+	}
+	@keyframes animateHeading {
+		0% {
+			letter-spacing: 2rem;
+			opacity: 0;
+			transform: translateZ(8rem);
+		}
+		3% {
+			letter-spacing: 1rem;
+			opacity: 1;
+			transform: translateZ(0);
+		}
+		25% {
+			letter-spacing: 1rem;
+			opacity: 1;
+			transform: translateZ(0);
+		}
+		28% {
+			letter-spacing: 2rem;
+			opacity: 0;
+			transform: translateZ(8rem);
+		}
+		100% {
+			letter-spacing: 2rem;
+			opacity: 0;
+			transform: translateZ(8rem);
+		}
+	}
+}
+/* End of Responsive */
+
+/* Animations */
+@keyframes animateHeading {
+	0% {
+		letter-spacing: 3rem;
+		opacity: 0;
+		transform: translateZ(8rem);
+	}
+	3% {
+		letter-spacing: 1.5rem;
+		opacity: 1;
+		transform: translateZ(0);
+	}
+	25% {
+		letter-spacing: 1.5rem;
+		opacity: 1;
+		transform: translateZ(0);
+	}
+	28% {
+		letter-spacing: 3rem;
+		opacity: 0;
+		transform: translateZ(8rem);
+	}
+	100% {
+		letter-spacing: 3rem;
+		opacity: 0;
+		transform: translateZ(8rem);
+	}
+}
+
+@keyframes fadeAnimation {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes animateNavbar {
+	0% {
+		top: -8rem;
+	}
+	100% {
+		top: 0rem;
+	}
+}
+/* End of Animations */
