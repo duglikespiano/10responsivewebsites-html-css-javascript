@@ -42,5 +42,4 @@
 6. Architect website
 7. Travel agency website
 8. Winery website
-   </br>
-   </br>
+9. Classic cars website

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="./style.css" rel="stylesheet" />
+		<script src="./app.js" defer></script>
+		<title>Classic Cars Website</title>
+	</head>
+	<body>
+		<!-- Menu -->
+		<div class="menu center target">
+			<div class="menu-line menu-line1"></div>
+			<div class="menu-line menu-line2"></div>
+		</div>
+		<!-- End of Menu -->
+
+		<!-- Navbar -->
+		<nav class="navbar target">
+			<a href="#home" class="navbar-link">Home</a>
+			<a href="#popular-cars" class="navbar-link">Popular Cars</a>
+			<a href="#video-gallery" class="navbar-link">Video Gallery</a>
+			<a href="#image-gallery" class="navbar-link">Image Gallery</a>
+			<a href="#contact" class="navbar-link">Contact</a>
+		</nav>
+		<!-- End of Navbar -->
+
+		<!-- Section1 -->
+		<div class="container">
+			<section id="home" class="section1 center target">
+				<h1 class="section-heading section1-heading">Classic Cars</h1>
+				<img src="./image/car-section1.png" class="section1-image" />
+			</section>
+		</div>
+		<!-- End of Section1 -->
+
+		<!-- Section2 -->
+		<div class="container">
+			<section id="popular-cars" class="section2 target">
+				<h1 class="section-heading section2-heading">Popular Cars</h1>
+				<div class="cards-container center">
+					<div class="card">
+						<h2 class="car-name">Car Name</h2>
+						<img class="card-image" src="./image/car-1.jpg" />
+						<h3 class="car-price">$ 200,000</h3>
+						<button type="button" class="card-button">See More</button>
+					</div>
+					<div class="card">
+						<h2 class="car-name">Car Name</h2>
+						<img class="card-image" src="./image/car-2.jpg" />
+						<h3 class="car-price">$ 150,000</h3>
+						<button type="button" class="card-button">See More</button>
+					</div>
+					<div class="card">
+						<h2 class="car-name">Car Name</h2>
+						<img class="card-image" src="./image/car-3.jpg" />
+						<h3 class="car-price">$ 100,000</h3>
+						<button type="button" class="card-button">See More</button>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- End of Section2 -->
+
+		<!-- Section3 -->
+		<div class="container">
+			<section id="video-gallery" class="section3 target">
+				<h1 class="section-heading section3-heading">Video Gallery</h1>
+				<div class="videos-container center">
+					<video class="video" src="./image/car-video-1.mp4" muted loop></video>
+					<video class="video" src="./image/car-video-2.mp4" muted loop></video>
+					<video class="video" src="./image/car-video-3.mp4" muted loop></video>
+				</div>
+				<div class="videos-container center">
+					<video class="video" src="./image/car-video-4.mp4" muted loop></video>
+					<video class="video" src="./image/car-video-5.mp4" muted loop></video>
+					<video class="video" src="./image/car-video-6.mp4" muted loop></video>
+				</div>
+			</section>
+		</div>
+		<!-- End of Section3 -->
+
+		<!-- Section4 -->
+		<div class="container">
+			<section id="image-gallery" class="section4 target">
+				<h1 class="section-heading section4-heading">Image Gallery</h1>
+				<div class="gallery center">
+					<div class="gallery-shelf"></div>
+					<img class="gallery-image1" src="./image/gallery-car-1.jpg" />
+					<img class="gallery-image2" src="./image/gallery-car-2.jpg" />
+					<img class="gallery-image3" src="./image/gallery-car-3.jpg" />
+				</div>
+				<div class="gallery center">
+					<div class="gallery-shelf"></div>
+					<img class="gallery-image4" src="./image/gallery-car-4.jpg" />
+					<img class="gallery-image5" src="./image/gallery-car-5.jpg" />
+					<img class="gallery-image6" src="./image/gallery-car-6.jpg" />
+				</div>
+			</section>
+		</div>
+		<!-- End of Section4 -->
+
+		<!-- Section5 -->
+		<div class="container">
+			<section id="contact" class="section5 center target">
+				<h1 class="section-heading section5-heading">Contact Us</h1>
+				<form class="contact-form">
+					<input type="text" class="form-input" placeholder="Your Name" />
+					<input type="email" class="form-input" placeholder="Your Email" />
+					<textarea class="form-input" placeholder="Enter Message"></textarea>
+					<input class="form-button" type="submit" value="Submit" />
+				</form>
+				<p class="copyright">Copyright &copy; CodeAndCreate All Rights Reserved</p>
+			</section>
+		</div>
+		<!-- End of Section5 -->
+	</body>
+</html>
