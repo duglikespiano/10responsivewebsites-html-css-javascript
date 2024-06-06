@@ -16,7 +16,7 @@
 
 - Project title : 10responsivewebsites_html,css,javascript
 - Related URL : https://www.udemy.com/course/10-mega-responsive-websites-with-html-css-and-javascript/
-- Period : May 05 2024 - In progress
+- Period : May 05 2024 - June 06 2024
 - Member(s) : Dug Park
 - Tech stack : </br>
   <img src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=html5&logoColor=white">

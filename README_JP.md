@@ -16,7 +16,7 @@
 
 - Project タイトル: 10responsivewebsites_html,css,javascript
 - 関連 URL : https://www.udemy.com/course/10-mega-responsive-websites-with-html-css-and-javascript/
-- 期間 : 2024.05.05 - 進行中
+- 期間 : 2024.05.05 - 2024.06.06
 - 人員 : 1 人
 - 技術スタック : </br>
   <img src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=html5&logoColor=white">
